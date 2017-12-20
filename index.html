@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>PDFEditor</title>
+    <link rel="stylesheet" type="text/css" href="https://sohodragon.sharepoint.com/sites/Training/allaintest/SiteAssets/PDFEditorFiles/CSS/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js"></script>
+    <script src="https://sohodragon.sharepoint.com/sites/Training/allaintest/SiteAssets/PDFEditorFiles/JS/scripts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+  </head>
+  <body>
+    <h3>hello world!!!!!!!!</h3>
+    <button type="button" onclick="openPDF()">Click Me!</button>
+    <embed id="samplePDF" src="" style="width: 100%!important; height: 200px!important;style="z-index:-5;" scrolling="no" frameborder="no" allowtransparency="true">
+        <div class="wrapper">
+      <!-- <img id="testimg" src="http://www.licensing.biz/cimages/c0f1a3a97bc0de97271f9813f7715bb3.png" width=400 height=200 /> -->
+
+      <embed id="samplePDF" src='https://sohodragon.sharepoint.com/sites/Training/allaintest/PDFEditorTestLibrary/TestPDF.pdf' style="width: 400px; height: 200px;" scrolling="no" frameborder="no" allowtransparency="true" />
+
+      <canvas id="signature-pad" class="signature-pad" width=400 height=200 />
+
+
+    </div>
+    <div>
+      <button id="save">Save</button>
+      <button id="clear">Clear</button>
+      <input id='uploadpdf' type="file" onchange="previewFile()"><br>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
