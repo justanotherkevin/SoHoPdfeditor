@@ -1,33 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>PDFEditor</title>
-    <link rel="stylesheet" type="text/css" href="https://sohodragon.sharepoint.com/sites/Training/allaintest/SiteAssets/PDFEditorFiles/CSS/styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js"></script>
-    <script src="https://sohodragon.sharepoint.com/sites/Training/allaintest/SiteAssets/PDFEditorFiles/JS/scripts.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
-  </head>
-  <body>
-    <h3>hello world!!!!!!!!</h3>
-    <button type="button" onclick="openPDF()">Click Me!</button>
-    <embed id="samplePDF" src="" style="width: 100%!important; height: 200px!important;style="z-index:-5;" scrolling="no" frameborder="no" allowtransparency="true">
-        <div class="wrapper">
-      <!-- <img id="testimg" src="http://www.licensing.biz/cimages/c0f1a3a97bc0de97271f9813f7715bb3.png" width=400 height=200 /> -->
 
-      <embed id="samplePDF" src='https://sohodragon.sharepoint.com/sites/Training/allaintest/PDFEditorTestLibrary/TestPDF.pdf' style="width: 400px; height: 200px;" scrolling="no" frameborder="no" allowtransparency="true" />
+<head>
+  <meta charset="utf-8">
+  <title>PDFEditor</title>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <!-- <script src="https://sohodragon.sharepoint.com/sites/Training/allaintest/SiteAssets/PDFEditorFiles/JS/scripts.js"></script> -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable=no">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.213/pdf.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.213/pdf.worker.min.js"></script>
 
-      <canvas id="signature-pad" class="signature-pad" width=400 height=200 />
+</head>
 
+<body>
+  <h3>hello world!!!!!!!!</h3>
+  <button id="upload-button">Select PDF</button>
+	<input type="file" id="file-to-upload" accept="application/pdf" />
 
-    </div>
-    <div>
-      <button id="save">Save</button>
-      <button id="clear">Clear</button>
-      <input id='uploadpdf' type="file" onchange="previewFile()"><br>
-    </div>
+	<div id="pdf-main-container">
+		<div id="pdf-loader">Loading document ...</div>
+		<div id="pdf-contents">
+			<div id="pdf-meta">
+				<div id="pdf-buttons">
+					<button id="pdf-prev">Previous</button>
+					<button id="pdf-next">Next</button>
+				</div>
+				<div id="page-count-container">Page <div id="pdf-current-page"></div> of <div id="pdf-total-pages"></div></div>
+			</div>
+			<canvas id="pdf-canvas" width="400"></canvas>
+			<div id="page-loader">Loading page ...</div>
+		</div>
+	</div>
 
-    <script src="script.js"></script>
-  </body>
+	<script type="text/javascript" src="scripts.js"></script>
+</body>
+
 </html>
